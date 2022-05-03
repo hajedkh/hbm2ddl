@@ -19,7 +19,7 @@ Hibernate: hbm2ddl.auto=update in production?</a>
 
 As proposed by @Vladimir we need to extract changes and apply it manually to prevent any issue and the most important 
 we need to decouple this process from the application server launch to guaranty that it will be created once for all replicas,
-in case we are in HA environment example: Kubernetes env,Cloud SAAS...
+in case we are in HA environment example: Kubernetes cluster,Cloud SAAS...
 
 Solution inspired by: <a href="https://docs.jboss.org/tools/4.1.0.Final/en/hibernatetools/html_single/index.html#d0e4651">
 Hibernate-Tools references guide</a> 
