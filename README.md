@@ -24,7 +24,7 @@ in case we are in HA environment example: Kubernetes cluster,Cloud SAAS...
 Solution inspired by: <a href="https://docs.jboss.org/tools/4.1.0.Final/en/hibernatetools/html_single/index.html#d0e4651">
 Hibernate-Tools references guide</a> 
 
-## Proof of concept
+## Solution in action
 
 This is a simple main class project which scans the classpath for annotated entities (Application jpa entities must be loaded in classpath)
 from a target package using reflections then it will be mapped to ddl resource executed by hibernate to create the final result 
