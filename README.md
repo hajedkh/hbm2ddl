@@ -1,4 +1,4 @@
-#Generic Hibernate jpa2ddl exporter tool (POC)
+# Generic Hibernate jpa2ddl exporter tool (POC)
 
 ## Context
 In some cases and specially for high availability environments for large applications creating and updating the  schema 
