@@ -15,7 +15,7 @@ Hibernate: hbm2ddl.auto=update in production?</a>
 >Theoretically, if hbm2ddl update worked in development, it should work in production too. But in reality, it's not always the case.
 >Even if it worked OK, it may be sub-optimal. DBAs are paid that much for a reason.
 > 
-> ######Vladimir Dyuzhev, Software Consultant
+> ###### Vladimir Dyuzhev, Software Consultant
 
 As proposed by @Vladimir we need to extract changes and apply it manually to prevent any issue and the most important 
 we need to decouple this process from the application server launch to guaranty that it will be created once for all replicas,
@@ -24,7 +24,7 @@ in case we are in HA environment example: Kubernetes env,Cloud SAAS...
 Solution inspired by: <a href="https://docs.jboss.org/tools/4.1.0.Final/en/hibernatetools/html_single/index.html#d0e4651">
 Hibernate-Tools references guide</a> 
 
-##Proof of concept
+## Proof of concept
 
 This is a simple main class project which scans the classpath for annotated entities (Application jpa entities must be loaded in classpath)
 from a target package using reflections then it will be mapped to ddl resource executed by hibernate to create the final result 
@@ -52,7 +52,7 @@ package.name=com.myproject.bookstore
 ```
 Add the SGBD driver jar and The entities classes to the classpath and fire it up 🔥
 
-##What's next?
+## What's next?
 
 We could launch the extraction in dry-run mode  to generate SQL scripts for the target SGBD (with the target Dialect)
 but for me I have developed this solution for an application to be deployed in a Kubernetes cluster which means that
